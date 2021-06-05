@@ -13,7 +13,7 @@ spec:
       name: redis-dev
       namespace: realtime-dev
   interval: 1m0s
-  path: ./deploy/overlay/dev
+  path: ./deploy/overlays/dev
   prune: true
   sourceRef:
     kind: GitRepository
