@@ -22,4 +22,11 @@ This repo is used for personal flux usage
 
 ## Command to create kustomization
 
-`flux create kustomization 
+`flux create kustomization monitoring \
+--interval=1h \
+--prune=true \
+--source=monitoring \
+--path="./manifests/monitoring" \
+--health-check="Deployment/prometheus.flux-system" \
+--health-check="Deployment/grafana.flux-system" \
+--export > ./app-cluster/monitor-kustomization.yaml`
